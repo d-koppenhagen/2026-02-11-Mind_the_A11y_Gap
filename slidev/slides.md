@@ -1748,9 +1748,15 @@ layout: end
 
 ## Questions?
 
-<div class="mt-8">
-Danny Koppenhagen<br>
-<a href="https://k9n.dev">k9n.dev</a>
+<div class="mt-8 flex items-center justify-center gap-8">
+  <div>
+    <img src="/qr-github.png" alt="QR Code to GitHub Repository" class="w-48 h-48" />
+    <p class="text-sm mt-2">Slides & Code</p>
+  </div>
+  <div>
+    Danny Koppenhagen<br>
+    <a href="https://k9n.dev">k9n.dev</a>
+  </div>
 </div>
 
 <!--

@@ -4,6 +4,8 @@ A talk about web accessibility best practices and common pitfalls to avoid.
 
 **By Danny Koppenhagen**
 
+**Event:** [Leipzig.js Meetup - February 11, 2026](https://www.meetup.com/de-de/leipzig-js/events/312880071/)
+
 ## 📊 View the Slides
 
 Access the presentation slides here:
