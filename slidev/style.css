@@ -1,0 +1,136 @@
+/* Custom styles for Mind the A11y Gap presentation */
+
+/* Accessibility-themed color palette */
+:root {
+  --color-a11y-green: #10b981;
+  --color-a11y-red: #ef4444;
+  --color-a11y-blue: #3b82f6;
+  --color-a11y-yellow: #f59e0b;
+  --slidev-theme-code-font-size: 14px;
+  font-size: 16px;
+}
+
+/* Problem/Solution indicators */
+.problem-indicator {
+  color: var(--color-a11y-red);
+  font-weight: bold;
+}
+
+.solution-indicator {
+  color: var(--color-a11y-green);
+  font-weight: bold;
+}
+
+.question-indicator {
+  color: var(--color-a11y-yellow);
+  font-weight: bold;
+}
+
+/* Code blocks with better contrast */
+.slidev-code {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight boxes for important info */
+.info-box {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.info-box.success {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--color-a11y-green);
+}
+
+.info-box.error {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid var(--color-a11y-red);
+}
+
+.info-box.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid var(--color-a11y-yellow);
+}
+
+.info-box.info {
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid var(--color-a11y-blue);
+}
+
+/* Better focus indicators for demos */
+.demo-focus-visible:focus-visible {
+  outline: 3px solid var(--color-a11y-blue);
+  outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Contrast examples */
+.contrast-demo {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+/* Grid layouts for side-by-side comparisons */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+/* Icon styling */
+.icon-large {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+/* Emphasis for key takeaways */
+.key-point {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+/* Better list styling */
+.checklist li {
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.checklist li::marker {
+  content: '✓ ';
+  color: var(--color-a11y-green);
+  font-weight: bold;
+}
+
+/* Code comparison styling */
+.code-bad {
+  border-left: 4px solid var(--color-a11y-red);
+}
+
+.code-good {
+  border-left: 4px solid var(--color-a11y-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}

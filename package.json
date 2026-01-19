@@ -1,0 +1,14 @@
+{
+  "name": "mind-the-a11y-gap",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently -n keycastr,slidev,storybook -c green,blue,magenta \"npm run start:keycastr\" \"npm run start:slidev\" \"npm run start:storybook\"",
+    "start:keycastr": "open -a KeyCastr",
+    "start:slidev": "cd slidev && npm run dev",
+    "start:storybook": "cd demos/fix-a11y && npm run storybook"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
