@@ -667,6 +667,24 @@ class: text-center
 layout: default
 ---
 
+# Lost Focus: The User Experience
+
+<div class="flex justify-center mb--10">
+  <img src="/focus-router-wrong.drawio.png" class="w-80%" alt="Comparison of focus behavior in traditional multi-page apps vs SPAs" />
+</div>
+
+**Issues:**
+- Focus remains on navigation link: Lost focus after navigation
+- No announcement of page change, users don't know content updated
+- Expectation: Focus at page start or right after navigation
+
+<!--
+-->
+
+---
+layout: default
+---
+
 # SPA Problem: Lost Focus After Navigation
 
 <div class="grid grid-cols-2 gap-4">
@@ -687,7 +705,7 @@ router.navigate('/products');
 <v-click>
 
 **Issues:**
-- Focus remains on navigation link
+- Lost / wrong focus
 - No announcement of page change
 - User doesn't know content updated
 
