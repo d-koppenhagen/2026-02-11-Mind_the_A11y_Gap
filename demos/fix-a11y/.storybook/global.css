@@ -213,8 +213,13 @@ input, textarea, select {
   font-size: 16px;
   width: 100%;
 
+  &[aria-invalid=true], &.error {
+    border: 2px solid rgb(200, 14, 14);
+  }
+
   +small {
     display: block;
+    padding-bottom: 0.25rem;
   }
 
   +small[role=alert], +small.error {
@@ -223,9 +228,21 @@ input, textarea, select {
 }
 label, .label {
   font-weight: bold;
+  padding-bottom: 0.25rem;
 
   &:has(+:is(input, textarea, select)) {
     display: flex;
     flex-direction: column;
   }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
 }

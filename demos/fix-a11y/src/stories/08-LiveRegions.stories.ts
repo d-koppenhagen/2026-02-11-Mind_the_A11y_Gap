@@ -10,7 +10,7 @@ export const Bad = () => {
     const div = document.createElement('div');
     div.setAttribute('aria-live', 'polite');
     div.textContent = 'Item added to cart!';
-    div.style.cssText = 'margin-top: 1rem; padding: 1rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px;';
+    div.className  = 'notification';
     document.querySelector('#bad-container')?.appendChild(div);
   };
 
@@ -36,7 +36,7 @@ export const Good = () => {
 
       const notification = document.createElement('div');
       notification.textContent = 'Item added to cart!';
-      notification.style.cssText = 'margin-top: 1rem; padding: 1rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px;';
+      notification.className  = 'notification';
       document.querySelector('#good-container')?.appendChild(notification);
     }
   };

@@ -319,9 +319,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/01-semantic-html" target="01-semantic-html" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="01-semantic-html" target="01-semantic-html" />
 
 <!--
 - Open the link and preview
@@ -685,9 +683,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/05-focus-outlines" target="05-focus-outlines" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="05-focus-outlines" target="05-focus-outlines" />
 
 ---
 layout: default
@@ -910,7 +906,7 @@ layout: default
 <label for="email">Email</label>
 <input type="email" id="email" class="error" />
 <span class="error-text">
-  Invalid email
+  No valid email was entered
 </span>
 ```
 
@@ -938,7 +934,7 @@ layout: default
   aria-errormessage="email-error"
 />
 <span id="email-error" role="alert">
-  Invalid email
+  No valid email was entered
 </span>
 ```
 
@@ -971,7 +967,7 @@ Use aria-describedby to associate the error message.
 Add role="alert" so the error is announced immediately.
 
 Now screen readers say:
-"Email, invalid, edit text. Invalid email"
+"Email, invalid, edit text. No valid email was entered"
 
 Users know exactly what's wrong!
 
@@ -985,9 +981,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/06-invalid-fields" target="06-invalid-fields" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="06-invalid-fields" target="06-invalid-fields" />
 
 ---
 layout: default
@@ -1077,9 +1071,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/07-form-submission" target="07-form-submission" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="07-form-submission" target="07-form-submission" />
 
 ---
 layout: default
@@ -1525,9 +1517,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/11-form-demo" target="11-form-demo" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="11-form-demo" target="11-form-demo" />
 
 ---
 layout: default
@@ -1604,9 +1594,7 @@ class: text-center
 
 # Demo
 
-<a href="/2026-02-11-Mind_the_A11y_Gap/storybook/?path=/story/10-image-alt-text" target="10-image-alt-text" class="text-2xl pt-10">
-  🔗 Open Storybook Demo
-</a>
+<StorybookLink story="10-image-alt-text" target="10-image-alt-text" />
 
 ---
 layout: image
