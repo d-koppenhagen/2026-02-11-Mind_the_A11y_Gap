@@ -30,6 +30,10 @@
     "footer footer";
 }
 
+hr {
+  width: 100%;
+}
+
 header, .header {
   grid-area: header;
   display: flex;
@@ -211,7 +215,7 @@ button, .button {
 input, textarea, select {
   padding: 0.5rem;
   font-size: 16px;
-  width: 100%;
+  width: calc(100% - 1.2rem);
 
   &[aria-invalid=true], &.error {
     border: 2px solid rgb(200, 14, 14);

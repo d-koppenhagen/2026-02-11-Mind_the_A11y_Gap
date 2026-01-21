@@ -319,7 +319,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="01-semantic-html" target="01-semantic-html" />
+<StorybookLink story="01-semantic-html" />
 
 <!--
 - Open the link and preview
@@ -683,7 +683,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="05-focus-outlines" target="05-focus-outlines" />
+<StorybookLink story="05-focus-outlines" />
 
 ---
 layout: default
@@ -981,7 +981,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="06-invalid-fields" target="06-invalid-fields" />
+<StorybookLink story="06-invalid-form-fields" />
 
 ---
 layout: default
@@ -1071,7 +1071,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="07-form-submission" target="07-form-submission" />
+<StorybookLink story="07-form-submission" />
 
 ---
 layout: default
@@ -1517,7 +1517,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="11-form-demo" target="11-form-demo" />
+<StorybookLink story="11-form-demo" />
 
 ---
 layout: default
@@ -1594,7 +1594,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="10-image-alt-text" target="10-image-alt-text" />
+<StorybookLink story="10-image-alt-text" />
 
 ---
 layout: image
