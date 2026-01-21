@@ -133,6 +133,10 @@ layout: default
 
 # Code Review: Spot the Issues
 
+<div class="grid grid-cols-5 gap-4">
+
+<div class="col-span-3">
+
 ```html {all|2|3|5|10|11|12|all}
 <div class="header">
   <div class="logo">My App</div>
@@ -157,6 +161,18 @@ layout: default
 </div>
 
 </v-click>
+
+</div>
+
+<div class="col-span-2">
+  <div class="w-95% ml-5 text-right">
+    <img src="./a11y_dept_everywhere.jpg" attributionsrc="https://i.imgflip.com/ahxlzv.jpg" title="made at imgflip.com" class="mt-7"/>
+  </div>
+</div>
+
+</div>
+
+
 
 <!--
 Let's do a code review together. This is actual code I've seen in production.
@@ -318,7 +334,7 @@ layout: default
 
 # Buttons vs Links
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-3 gap-4">
 
 <div>
 
@@ -369,6 +385,10 @@ layout: default
 
 </div>
 
+<div class="w-95% ml-5 text-right">
+  <img src="https://i.imgflip.com/ahxldt.jpg" attributionsrc="https://i.imgflip.com/ahxldt.jpg" title="made at imgflip.com" class="mt--10"/>
+</div>
+
 </div>
 
 <!--
@@ -399,9 +419,9 @@ layout: default
 
 # Landmarks & Headings
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-8 gap-4">
 
-<div>
+<div class="col-span-3">
 
 ### ❌ Problem
 
@@ -416,7 +436,7 @@ layout: default
 
 </div>
 
-<div>
+<div class="col-span-2">
 
 ### ✅ Solution
 
@@ -429,6 +449,12 @@ layout: default
 <footer>...</footer>
 ```
 
+</div>
+
+<div class="col-span-3">
+  <div class="w-95% ml-5 text-right">
+    <img src="./landmarks.png" alt="" class=""/>
+  </div>
 </div>
 
 </div>
@@ -1583,7 +1609,8 @@ class: text-center
 </a>
 
 ---
-layout: section
+layout: image
+image: /testing.jpg
 ---
 
 # Testing & Tools
