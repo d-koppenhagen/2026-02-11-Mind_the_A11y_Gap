@@ -1,7 +1,23 @@
 /* Layout */
 
 :root {
-  font-family: "Avenir Next", "Nunito Sans", ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    "Avenir Next",
+    "Nunito Sans",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "system-ui",
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 .stacked {
@@ -34,7 +50,8 @@ hr {
   width: 100%;
 }
 
-header, .header {
+header,
+.header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
@@ -43,25 +60,30 @@ header, .header {
   background: rgb(22, 28, 44);
   color: white;
 }
-footer, .footer {
+footer,
+.footer {
   grid-area: footer;
   color: black;
 }
-aside, .sidebar {
+aside,
+.sidebar {
   grid-area: sidebar;
   padding: 1rem;
   background: #f0f0f0;
   float: left;
 }
-nav, .nav {
+nav,
+.nav {
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
 }
-main, .content {
+main,
+.content {
   padding: 1rem;
 }
-form, .form {
+form,
+.form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -99,14 +121,14 @@ form, .form {
 
 .visually-hidden,
 .visually-hidden-focusable:not(:focus, :focus-within) {
-	border: 0 !important;
-	clip-path: inset(50%) !important; /* 2 */
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	width: 1px !important;
-	white-space: nowrap !important; /* 3 */
+  border: 0 !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
 }
 
 /*
@@ -116,9 +138,8 @@ form, .form {
 */
 .visually-hidden:not(caption),
 .visually-hidden-focusable:not(caption):not(:focus, :focus-within) {
-	position: absolute !important;
+  position: absolute !important;
 }
-
 
 /*
 	Prevent overflowing children from being focusable.
@@ -127,12 +148,21 @@ form, .form {
 */
 .visually-hidden *,
 .visually-hidden-focusable:not(:focus, :focus-within) * {
-	overflow: hidden !important;
+  overflow: hidden !important;
 }
 
 /* Atomics */
+hgroup:has(> p) > h1 {
+  margin-bottom: 0;
+}
+hgroup > p {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+}
 
-h1, .brand, .headline {
+h1,
+.brand,
+.headline {
   display: block;
   font-size: 2em;
   margin-block-start: 0.67em;
@@ -142,7 +172,8 @@ h1, .brand, .headline {
   font-weight: bold;
 }
 
-h2, .title {
+h2,
+.title {
   font-size: 1.5rem;
   display: block;
   margin-block-start: 0.83em;
@@ -153,14 +184,31 @@ h2, .title {
   unicode-bidi: isolate;
 }
 
-nav a, .nav-link {
+nav a,
+.nav-link {
   display: inline-block;
   padding: 0.5em 1em;
   position: relative;
   margin-bottom: 0.5rem;
   background-color: transparent;
   border: 0;
-  font-family: "Avenir Next", "Nunito Sans", ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    "Avenir Next",
+    "Nunito Sans",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "system-ui",
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   font-size: 16px;
   text-decoration: none;
   text-align: center;
@@ -174,14 +222,31 @@ nav a, .nav-link {
   }
 }
 
-button, .button {
+button,
+.button {
   display: inline-block;
   padding: 0.5em 1em;
   position: relative;
   margin-bottom: 1em;
   background-color: transparent;
   border: 0;
-  font-family: "Avenir Next", "Nunito Sans", ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    "Avenir Next",
+    "Nunito Sans",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "system-ui",
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   font-size: 16px;
   text-decoration: none;
   text-align: center;
@@ -189,8 +254,7 @@ button, .button {
   border: 1px solid #0d0d0d;
   background-color: #ffd500;
 
-
-  &:hover:not(:disabled,[aria-disabled=true]) {
+  &:hover:not(:disabled, [aria-disabled="true"]) {
     cursor: pointer;
     background-color: #f6db56;
   }
@@ -207,30 +271,35 @@ button, .button {
     cursor: not-allowed;
   }
 
-  &[type="submit"]:has(+small) {
+  &[type="submit"]:has(+ small) {
     margin-bottom: 0;
   }
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   padding: 0.5rem;
   font-size: 16px;
   width: calc(100% - 1.2rem);
 
-  &[aria-invalid=true], &.error {
+  &[aria-invalid="true"],
+  &.error {
     border: 2px solid rgb(200, 14, 14);
   }
 
-  +small {
+  + small {
     display: block;
     padding-bottom: 0.25rem;
   }
 
-  +small[role=alert], +small.error {
+  + small[role="alert"],
+  + small.error {
     color: rgb(200, 14, 14);
   }
 }
-label, .label {
+label,
+.label {
   font-weight: bold;
   padding-bottom: 0.25rem;
 

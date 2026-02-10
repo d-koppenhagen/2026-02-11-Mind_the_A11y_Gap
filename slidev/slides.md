@@ -1579,7 +1579,8 @@ layout: default
 
 ```html
 <!-- Informative image -->
-<img src="chart.png" alt="Sales increased 25% in Q4" />
+<img src="angular-buch.png"
+     alt="Book Cover of the German book 'Das moderne Praxisbuch zu Angular: Von den Grundlagen bis zur professionellen Entwicklung mit Signals', written by Ferdinand Malcher, Danny Koppenhagen and Johannes Hoppe" />
 
 <!-- Decorative image -->
 <img src="decoration.png" alt="" />
