@@ -139,7 +139,7 @@ layout: default
 
 ```html {all|2|3|5|10|11|12|all}
 <div class="header">
-  <div class="logo">My App</div>
+  <div class="headline">My App</div>
   <div class="nav">
     <div onclick="goToHome()">Home</div>
     <div onclick="goToProducts()">Products</div>
@@ -178,14 +178,14 @@ layout: default
 Let's do a code review together. This is actual code I've seen in production.
 
 [CLICK through highlights]
-- Line 2: "logo" - is this just text or an image? No semantic meaning
+- Line 2: "headline" as a div - no semantic heading
 - Line 3: "nav" - a div, not a nav element
 - Line 5: Clickable divs instead of buttons or links
-- Line 7: No header element
+- Line 10: A form built entirely with divs
 - And more...
 
 [FINAL CLICK]
-This code has at least 8 major accessibility issues!
+This code has at least 7 major accessibility issues!
 
 Can anyone spot some of them?
 [PAUSE for audience interaction]
@@ -312,18 +312,153 @@ Now we have:
 Let's dive deeper into specific patterns...
 -->
 
+
 ---
-layout: center
-class: text-center
+layout: default
 ---
 
-# Demo
+# Landmarks & Headings
 
-<StorybookLink story="01-semantic-html" />
+<div class="grid grid-cols-8 gap-4">
+
+<div class="col-span-3">
+
+### ❌ Problem
+
+```html
+<div class="header">...</div>
+<div class="sidebar">...</div>
+<div class="content">
+  <div class="title">Featured</div>
+</div>
+<div class="footer">...</div>
+```
+
+</div>
+
+<div class="col-span-2">
+
+### ✅ Solution
+
+```html
+<header>...</header>
+<aside>...</aside>
+<main>
+  <h2>Featured</h2>
+</main>
+<footer>...</footer>
+```
+
+</div>
+
+<div class="col-span-3">
+  <div class="w-95% ml-5 text-right">
+    <img src="./landmarks.png" alt="" class=""/>
+  </div>
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-4 p-4 bg-blue-500 bg-opacity-10 rounded">
+💡 Landmarks create a navigable structure. Screen reader users can jump between them!
+</div>
+
+</v-click>
 
 <!--
-- Open the link and preview
-- Open the a11y tree and a11y view to show current roles etc
+Landmarks and headings create the navigable structure of your page.
+
+LEFT - Problem:
+All divs with classes. Screen readers see no structure.
+
+RIGHT - Solution:
+Proper landmarks: header, aside, main, footer
+Proper heading hierarchy: h1 for page title, h2 for sections
+
+[CLICK]
+Why this matters:
+Screen reader users can press a key to jump between landmarks or headings.
+It's like a table of contents for your page!
+
+Without this, they have to listen to EVERYTHING linearly.
+
+Important: Heading hierarchy must be correct - never skip levels!
+-->
+
+---
+layout: default
+---
+
+# Skip Links
+
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+
+```html
+<body>
+  <a href="#main" class="skip-link">
+    Skip to main content
+  </a>
+  <header>...</header>
+  <nav>...</nav>
+  <main id="main" tabindex="-1">
+    <!-- Main content -->
+  </main>
+</body>
+```
+
+</div>
+
+<div>
+
+```css
+.skip-link:not(:focus, :focus-within) {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+```
+
+</div>
+
+</div>
+
+<v-clicks>
+
+- **Complement to landmarks** - not a replacement (Screen readers already have landmark navigation)!
+- Useful for **keyboard users** to bypass long navigation
+- Consider when you have **many nav items** before main content
+
+</v-clicks>
+
+<v-click>
+
+<div class="mt-4 p-4 bg-yellow-500 bg-opacity-10 rounded">
+⚠️ Use with care: If you have proper landmarks, skip links are a UX enhancement, not a requirement.
+</div>
+
+</v-click>
+
+<!--
+Skip links allow keyboard users to jump directly to main content.
+
+But here's the thing: If you have proper landmarks, screen reader users can already navigate with shortcuts.
+
+Skip links are primarily for sighted keyboard users who can't use landmark navigation.
+
+Use them when:
+- You have a lot of navigation items
+- Your header is complex with many interactive elements
+
+Don't rely on skip links as a substitute for proper landmarks!
 -->
 
 ---
@@ -406,173 +541,6 @@ The solution is simple:
 - Use anchor for navigation (going to another page)
 
 This simple rule solves so many problems!
-
-Quick question: Can you spot the issue here?
-[PAUSE]
--->
-
----
-layout: default
----
-
-# Landmarks & Headings
-
-<div class="grid grid-cols-8 gap-4">
-
-<div class="col-span-3">
-
-### ❌ Problem
-
-```html
-<div class="header">...</div>
-<div class="sidebar">...</div>
-<div class="content">
-  <div class="title">Featured</div>
-</div>
-<div class="footer">...</div>
-```
-
-</div>
-
-<div class="col-span-2">
-
-### ✅ Solution
-
-```html
-<header>...</header>
-<aside>...</aside>
-<main>
-  <h2>Featured</h2>
-</main>
-<footer>...</footer>
-```
-
-</div>
-
-<div class="col-span-3">
-  <div class="w-95% ml-5 text-right">
-    <img src="./landmarks.png" alt="" class=""/>
-  </div>
-</div>
-
-</div>
-
-<v-click>
-
-<div class="mt-4 p-4 bg-blue-500 bg-opacity-10 rounded">
-💡 Landmarks create a navigable structure. Screen reader users can jump between them!
-</div>
-
-</v-click>
-
-<!--
-Landmarks and headings create the navigable structure of your page.
-
-LEFT - Problem:
-All divs with classes. Screen readers see no structure.
-
-RIGHT - Solution:
-Proper landmarks: header, aside, main, footer
-Proper heading hierarchy: h1 for page title, h2 for sections
-
-[CLICK]
-Why this matters:
-Screen reader users can press a key to jump between landmarks or headings.
-It's like a table of contents for your page!
-
-Without this, they have to listen to EVERYTHING linearly.
-
-Important: Heading hierarchy must be correct - never skip levels!
--->
-
----
-layout: default
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Form Labels
-
-<div class="grid grid-cols-2 gap-4">
-
-<div>
-
-### ❌ Problem
-
-```html
-<input
-  type="text"
-  placeholder="Enter your email"
-/>
-
-<input type="checkbox" />
-<span>Accept terms</span>
-```
-
-<v-click>
-
-**Issues:**
-- Placeholder is not a label
-- Checkbox not associated
-- Screen reader: "Edit text, blank"
-
-</v-click>
-
-</div>
-
-<div>
-
-<v-click>
-
-### ✅ Solution
-
-```html
-<label for="email">Enter your email</label>
-<input type="text" id="email" />
-
-<label>
-  <input type="checkbox" />
-  Accept terms
-</label>
-```
-
-**Benefits:**
-- Proper association
-- Clickable label
-- Screen reader: "Enter your email, edit text"
-
-</v-click>
-
-</div>
-
-</div>
-
-<!--
-Form labels are critical but often forgotten.
-
-LEFT - Problem:
-Using placeholder as label - very common mistake!
-Checkbox with nearby text but no association
-
-[CLICK]
-Issues:
-- Placeholders disappear when you type
-- Screen readers just say "edit text, blank" - no context!
-- You can't click the text to focus the input
-
-RIGHT:
-[CLICK]
-Solution:
-Use proper label elements with for/id association
-Or wrap the input in the label
-
-Benefits:
-- Screen readers announce the label
-- You can click the label text to focus
-- Labels don't disappear
-- It's just better UX for everyone!
-
-Now let's talk about keyboard navigation...
 -->
 
 ---
@@ -683,7 +651,7 @@ class: text-center
 
 # Demo
 
-<StorybookLink story="05-focus-outlines" />
+<StorybookLink story="01-semantic-html" />
 
 ---
 layout: default
@@ -886,6 +854,95 @@ Error handling is especially problematic.
 Let's look at the patterns you need to know...
 -->
 
+---
+layout: default
+dragPos:
+  square: 691,32,167,_,-16
+---
+
+# Form Labels
+
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+
+### ❌ Problem
+
+```html
+<input
+  type="text"
+  placeholder="Enter your email"
+/>
+
+<input type="checkbox" />
+<span>Accept terms</span>
+```
+
+<v-click>
+
+**Issues:**
+- Placeholder is not a label
+- Checkbox not associated
+- Screen reader: "Edit text, blank"
+
+</v-click>
+
+</div>
+
+<div>
+
+<v-click>
+
+### ✅ Solution
+
+```html
+<label for="email">Enter your email</label>
+<input type="email" id="email"
+  autocomplete="email" />
+
+<label>
+  <input type="checkbox" />
+  Accept terms
+</label>
+```
+
+**Benefits:**
+- Proper association
+- Clickable label
+- Screen reader: "Enter your email, edit text"
+- `autocomplete` helps users with cognitive disabilities
+
+</v-click>
+
+</div>
+
+</div>
+
+<!--
+Form labels are critical but often forgotten.
+
+LEFT - Problem:
+Using placeholder as label - very common mistake!
+Checkbox with nearby text but no association
+
+[CLICK]
+Issues:
+- Placeholders disappear when you type
+- Screen readers just say "edit text, blank" - no context!
+- You can't click the text to focus the input
+
+RIGHT:
+[CLICK]
+Solution:
+Use proper label elements with for/id association
+Or wrap the input in the label
+
+Benefits:
+- Screen readers announce the label
+- You can click the label text to focus
+- Labels don't disappear
+- It's just better UX for everyone!
+-->
 
 ---
 layout: default
@@ -949,6 +1006,14 @@ layout: default
 
 </div>
 
+<v-click>
+
+<div class="mt-2 p-2 bg-yellow-500 bg-opacity-10 rounded text-sm">
+⚠️ Note: `aria-errormessage` has limited browser support. Use `aria-describedby` as fallback for broader compatibility.
+</div>
+
+</v-click>
+
 <!--
 Form validation is critical for accessibility.
 
@@ -963,7 +1028,7 @@ RIGHT:
 [CLICK]
 Solution:
 Use aria-invalid="true" to mark the field as invalid.
-Use aria-describedby to associate the error message.
+Use aria-errormessage (or aria-describedby as fallback) to associate the error message.
 Add role="alert" so the error is announced immediately.
 
 Now screen readers say:
@@ -973,15 +1038,6 @@ Users know exactly what's wrong!
 
 But there's more...
 -->
-
----
-layout: center
-class: text-center
----
-
-# Demo
-
-<StorybookLink story="06-invalid-form-fields" />
 
 ---
 layout: default
@@ -1063,15 +1119,6 @@ The right solution:
 - After submit we set focus on the first invalid field
 - This way everyone knows immediately where the problem is and what to do
 -->
-
----
-layout: center
-class: text-center
----
-
-# Demo
-
-<StorybookLink story="07-form-submission" />
 
 ---
 layout: default
@@ -1162,6 +1209,19 @@ This is such a simple improvement but makes forms so much better.
 Combine this with aria-invalid and aria-describedby, and you have a fully accessible form validation pattern.
 
 Now let's talk about dynamic content...
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# Demo
+
+<StorybookLink story="11-form-demo" />
+
+<!--
+Let's see all of this in action - form labels, validation, error handling, and focus management combined in one demo.
 -->
 
 ---
@@ -1351,9 +1411,6 @@ The live region is part of the component structure.
 The critical rule for both: The live region must exist in the DOM BEFORE you update its content.
 
 That's the secret to reliable screen reader announcements.
-
-Let me show you a quick demo...
-[This is where you'd do the live screen reader demo]
 -->
 
 ---
@@ -1511,15 +1568,6 @@ Pro tip: Check your design system colors early!
 -->
 
 ---
-layout: center
-class: text-center
----
-
-# Demo
-
-<StorybookLink story="11-form-demo" />
-
----
 layout: default
 ---
 
@@ -1584,17 +1632,54 @@ Videos:
 
 Quick rule: If removing the image/video would lose information, you need an alternative.
 
-Now let's talk about testing...
+Now let's talk about reduced motion and visual preferences...
 -->
 
 ---
-layout: center
-class: text-center
+layout: default
 ---
 
-# Demo
+# Reduced Motion
 
-<StorybookLink story="10-image-alt-text" />
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+```
+
+</div>
+
+<div>
+
+<v-clicks>
+
+- Some users experience **motion sickness** from animations
+- Respect the OS-level preference via media query
+- Easy to implement, big impact
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<!--
+Reduced motion is often overlooked but important.
+
+Some users get dizzy or nauseous from animations and transitions.
+Modern operating systems let users set a "reduce motion" preference.
+We can respect that with a simple media query.
+
+This is one of the easiest accessibility wins you can get!
+-->
 
 ---
 layout: image
@@ -1783,7 +1868,9 @@ layout: end
 
 <div class="mt-8 flex items-center justify-center gap-8">
   <div>
-    <img src="/qr-github.png" alt="QR Code to GitHub Repository" class="w-48 h-48" />
+    <a href="https://github.com/d-koppenhagen/2026-02-11-Mind_the_A11y_Gap" target="_blank">
+      <img src="/qr-github.png" alt="QR Code to GitHub Repository" class="w-48 h-48" />
+    </a>
     <p class="text-sm mt-2">Slides & Code</p>
   </div>
   <div>

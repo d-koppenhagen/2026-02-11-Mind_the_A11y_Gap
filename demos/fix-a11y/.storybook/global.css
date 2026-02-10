@@ -234,9 +234,22 @@ label, .label {
   font-weight: bold;
   padding-bottom: 0.25rem;
 
-  &:has(+:is(input, textarea, select)) {
+  &:has(:is(input, textarea, select)) {
     display: flex;
     flex-direction: column;
+  }
+
+  &:has(:is(input[type="checkbox"])) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 

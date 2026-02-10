@@ -6,8 +6,11 @@ export default {
 };
 
 export const Bad = () => /* html */`
-  <form>
-    <input type="text" placeholder="Enter your email" />
+  <div class="form">
+    <div>
+      <label>Enter your email</label>
+      <input type="text" />
+    </div>
 
     <div class="label">
       <input type="checkbox" />
@@ -15,7 +18,7 @@ export const Bad = () => /* html */`
     </div>
 
     <button type="submit">Submit</button>
-  </form>
+  </div>
 `;
 
 export const Good = () => /* html */`

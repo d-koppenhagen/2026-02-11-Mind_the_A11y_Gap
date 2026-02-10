@@ -16,6 +16,7 @@ export const Bad = () => /* html */`
   <div class="content">
     <div class="title">Welcome</div>
     <div class="form">
+      <label>Enter your name</label>
       <input type="text" placeholder="Enter your name" />
       <div class="button" onclick="alert('Submit')">Submit</div>
     </div>
