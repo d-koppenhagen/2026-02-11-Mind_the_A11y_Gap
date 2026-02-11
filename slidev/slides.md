@@ -1573,6 +1573,10 @@ layout: default
 
 # Media Alternatives
 
+<div class="flex gap-4">
+
+<div class="w-[70%]">
+
 <v-click>
 
 ## Images
@@ -1595,6 +1599,31 @@ layout: default
 
 </v-click>
 
+</div>
+
+<div class="w-[30%]">
+
+<v-switch>
+  <template #1>
+
+### ❌ Problem
+
+<img src="https://foo.bar/INVALID.png" class="h-70 w-55 rounded shadow border-1" />
+
+  </template>
+  <template #2>
+
+### ✅ Correct
+
+<img src="https://angular-buch.com/assets/img/book-cover-v1m.png" alt="Book Cover of the German Angular book" class="max-h-70 rounded shadow" />
+
+   </template>
+</v-switch>
+
+</div>
+
+</div>
+
 <!--
 Media alternatives are essential for users who can't see or hear content.
 
@@ -1602,6 +1631,9 @@ Images:
 - Informative images: Describe what the image conveys
 - Decorative images: Empty alt text (alt="") so screen readers skip it
 - Complex images: Use aria-describedby for longer descriptions
+
+[CLICK] Here we see an image with an invalid URL - the browser shows a broken image icon.
+[CLICK] After fixing the URL, the book cover loads correctly.
 
 Quick rule: If removing the image/video would lose information, you need an alternative.
 -->
