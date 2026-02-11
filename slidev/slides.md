@@ -323,7 +323,7 @@ layout: default
 
 <div class="col-span-3">
 
-### ❌ Problem
+## ❌ Problem
 
 ```html
 <div class="header">...</div>
@@ -338,7 +338,7 @@ layout: default
 
 <div class="col-span-2">
 
-### ✅ Solution
+## ✅ Solution
 
 ```html
 <header>...</header>
@@ -471,7 +471,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```html
 <div onclick="save()">
@@ -498,7 +498,7 @@ layout: default
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```html
 <button onclick="save()">
@@ -570,7 +570,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```css
 * {
@@ -598,7 +598,7 @@ button:focus {
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```css
 button:focus-visible { /* customize */
@@ -681,7 +681,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```js
 // User clicks "Products" link
@@ -707,7 +707,7 @@ router.navigate('/products');
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```js
 router.navigate('/products'); // After nav
@@ -762,7 +762,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```html
 <!-- Every page -->
@@ -787,7 +787,7 @@ layout: default
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```js
 function updateTitle(pageName) {
@@ -866,7 +866,7 @@ dragPos:
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```html
 <input
@@ -893,7 +893,7 @@ dragPos:
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```html
 <label for="email">Enter your email</label>
@@ -954,7 +954,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```html
 <style>
@@ -982,7 +982,7 @@ layout: default
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```html
 <label for="email">Email</label>
@@ -1051,7 +1051,7 @@ How can we handle when users want to submit invalid forms?
 
 <div class="mt-4 p-4 bg-red-500 bg-opacity-10 rounded">
 
-### ❌ Disabled Without Explanation
+## ❌ Disabled Without Explanation
 
 ```html
 <button type="submit" disabled>Submit</button>
@@ -1062,7 +1062,7 @@ How can we handle when users want to submit invalid forms?
 
 <div class="mt-4 p-4 bg-yellow-500 bg-opacity-10 rounded">
 
-### ⚠️ Disabled With Hint
+## ⚠️ Disabled With Hint
 
 ```html
 <button type="submit" disabled aria-describedby="submit-hint">Submit</button>
@@ -1082,7 +1082,7 @@ layout: default
 
 <div class="mt-4 p-4 bg-green-500 bg-opacity-10 rounded">
 
-### ✅ Enabled With Field Validation
+## ✅ Enabled With Field Validation
 
 ```html
 <input aria-invalid="true" aria-errormessage="email-error" />
@@ -1130,7 +1130,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```js
 function handleSubmit(e) {
@@ -1159,7 +1159,7 @@ function handleSubmit(e) {
 
 <v-click>
 
-### ✅ Solution
+## ✅ Solution
 
 ```js
 function handleSubmit(e) {
@@ -1252,7 +1252,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```js
 // Add notification
@@ -1281,7 +1281,7 @@ function showNotification(msg) {
 
 <v-click>
 
-### ✅ Solution: Global Live Region
+## ✅ Solution: Global Live Region
 
 ```html
 <!-- In your HTML, always present -->
@@ -1494,7 +1494,7 @@ layout: default
 
 <div>
 
-### ❌ Problem
+## ❌ Problem
 
 ```css
 /* Light gray on white */
@@ -1513,7 +1513,7 @@ This text is hard to read
 
 <div>
 
-### ✅ Solution
+## ✅ Solution
 
 ```css
 /* Dark gray on white */
@@ -1606,14 +1606,14 @@ layout: default
 <v-switch>
   <template #1>
 
-### ❌ Problem
+## ❌ Problem
 
 <img src="https://foo.bar/INVALID.png" class="h-70 w-55 rounded shadow border-1" />
 
   </template>
   <template #2>
 
-### ✅ Correct
+## ✅ Correct
 
 <img src="https://angular-buch.com/assets/img/book-cover-v1m.png" alt="Book Cover of the German Angular book" class="max-h-70 rounded shadow" />
 
@@ -1739,17 +1739,17 @@ layout: default
 
 <v-clicks>
 
-### Automated Testing
+## Automated Testing
 - **axe DevTools** (Chrome/Firefox extension) - catches ~30-40% of issues
 - **Lighthouse** (built into Chrome) - accessibility audit
 - **WAVE** (WebAIM) - visual feedback overlay
 
-### Manual Testing
+## Manual Testing
 - **Keyboard only** - unplug your mouse, try to use your app!
 - **Screen reader** - VoiceOver (Mac), NVDA (Windows, free), JAWS (Windows)
 - **Zoom to 200%** - does your layout still work?
 
-### Browser DevTools
+## Browser DevTools
 - **Accessibility Tree** - see what assistive tech sees
 - **Contrast Checker** - verify color ratios
 - **Lighthouse** - automated audit
@@ -1843,13 +1843,13 @@ layout: default
 
 <div>
 
-### Learn More
+## Learn More
 - [WCAG Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 - [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [WebAIM](https://webaim.org/)
 - [A11y Project](https://www.a11yproject.com/)
 
-### Tools
+## Tools
 - [axe DevTools](https://www.deque.com/axe/devtools/)
 - [WAVE](https://wave.webaim.org/)
 - [Contrast Checker](https://webaim.org/resources/contrastchecker/)
@@ -1858,13 +1858,13 @@ layout: default
 
 <div>
 
-### My Content
+## My Content
 
 - 📝 [Blog: k9n.dev](https://k9n.dev)
 - 🐦 [BlueSky: @k9n.dev](https://bsky.app/profile/k9n.dev)
 - 💼 [LinkedIn](https://linkedin.com/in/d-koppenhagen)
 
-### This Talk
+## This Talk
 
 - 📊 Slides: [github.com/d-koppenhagen/...](https://github.com/d-koppenhagen)
 - 💬 Questions? Let's chat!

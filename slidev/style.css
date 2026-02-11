@@ -10,6 +10,35 @@
   font-size: 16px;
 }
 
+.slidev-layout.default h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.slidev-layout h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.slidev-layout h3 {
+  font-size: 1rem;
+}
+
+.slidev-layout.cover h2 {
+  font-size: 2rem;
+}
+
+.slidev-layout h2 + ul {
+  margin: 0;
+}
+
+.slidev-layout h2:has(+ul) {
+  margin: 0;
+}
+
+
 /* Problem/Solution indicators */
 .problem-indicator {
   color: var(--color-a11y-red);
