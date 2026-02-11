@@ -166,7 +166,7 @@ layout: default
 
 <div class="col-span-2">
   <div class="w-95% ml-5 text-right">
-    <img src="./a11y_dept_everywhere.jpg" attributionsrc="https://i.imgflip.com/ahxlzv.jpg" title="made at imgflip.com" class="mt-7"/>
+    <img src="/a11y_dept_everywhere.jpg" attributionsrc="https://i.imgflip.com/ahxlzv.jpg" title="made at imgflip.com" class="mt-7"/>
   </div>
 </div>
 
@@ -353,7 +353,7 @@ layout: default
 
 <div class="col-span-3">
   <div class="w-95% ml-5 text-right">
-    <img src="./landmarks.png" alt="" class=""/>
+    <img src="/landmarks.png" alt="" class=""/>
   </div>
 </div>
 
